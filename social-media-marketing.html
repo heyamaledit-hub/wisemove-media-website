@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing | Wisemove.media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 50%, #00d2ff 100%);
+            --text-gradient: linear-gradient(to right, #4A00E0, #00d2ff);
+            --bg-color: #ffffff;
+            --light-bg: #f9f9fb;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(74, 0, 224, 0.2);
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
+        nav {
+            display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-img { height: 40px; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: #333; }
+        .logo-text span { background: var(--text-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-main); margin-left: 30px; font-weight: 500; transition: 0.3s; position: relative;
+        }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background: var(--primary-gradient); transition: width 0.3s; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: #8E2DE2; }
+        .btn-primary {
+            background: var(--primary-gradient); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none;
+            font-weight: 600; border: none; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .page-hero {
+            min-height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 20px;
+            background: radial-gradient(circle at top right, rgba(0, 210, 255, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(142, 45, 226, 0.1), transparent 40%);
+        }
+        .page-hero h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 15px; }
+        .page-hero h1 span { background: var(--text-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 560px; margin: 0 auto; }
+        section { padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary-gradient); margin: 10px auto 0; border-radius: 2px; }
+        .service-content { max-width: 800px; margin: 0 auto; color: var(--text-light); line-height: 1.8; }
+        .service-content h3 { color: var(--text-main); margin: 30px 0 15px; font-size: 1.25rem; }
+        .service-content ul { margin: 15px 0 15px 25px; }
+        .service-content p { margin-bottom: 15px; }
+        .cta-box { text-align: center; padding: 50px 20px; background: var(--light-bg); border-radius: var(--radius); margin-top: 40px; }
+        .cta-box p { margin-bottom: 20px; color: var(--text-light); }
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        @media (max-width: 768px) { .page-hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-container">
+            <div class="logo-text">Wisemove<span>.media</span></div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="social-media-marketing.html" class="active">Social Media</a>
+            <a href="seo-sem.html">SEO & SEM</a>
+            <a href="reels-video-production.html">Reels & Video</a>
+            <a href="graphic-design.html">Graphic Design</a>
+            <a href="index.html#works">Works</a>
+            <a href="index.html#contact" class="btn-primary" style="margin-left: 20px; color: white;">Contact Us</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div data-aos="fade-up">
+            <h1>Social Media <span>Marketing</span></h1>
+            <p>Build community, increase brand awareness, and drive real engagement across Instagram, Facebook, LinkedIn & more.</p>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">What We Offer</h2>
+        <div class="service-content" data-aos="fade-up">
+            <p>We manage your social presence with a clear strategy: the right platforms, consistent content, and data-backed decisions so your brand stays top of mind.</p>
+            <h3>Our approach</h3>
+            <ul>
+                <li>Strategy & content calendars aligned with your goals</li>
+                <li>Community management and timely engagement</li>
+                <li>Stories, reels, and posts designed to stop the scroll</li>
+                <li>Performance reports and actionable insights</li>
+            </ul>
+            <h3>Why it matters</h3>
+            <p>Strong social media builds trust, brings leads, and turns followers into customers. We help you grow without the guesswork.</p>
+            <div class="cta-box">
+                <p>Ready to level up your social presence?</p>
+                <a href="index.html#contact" class="btn-primary">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2024 Wisemove.media. All Rights Reserved.</p></footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
