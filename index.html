@@ -254,7 +254,9 @@
 
         .reel-card {
             min-width: 280px;
-            height: 500px;
+            width: 280px;
+            aspect-ratio: 9 / 16;
+            height: auto;
             background: #000;
             border-radius: var(--radius);
             position: relative;
@@ -279,6 +281,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             border-radius: var(--radius);
         }
 
@@ -407,6 +410,57 @@
             text-align: center;
         }
 
+        /* --- PARTNERS SECTION --- */
+        .partners-section {
+            background-color: var(--light-bg);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .partner-img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        .partner-card:hover .partner-img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .partner-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         /* --- CONTACT SECTION --- */
         .contact-container {
             display: flex;
@@ -495,6 +549,19 @@
             .contact-container { padding: 30px 20px; }
             nav { padding: 20px; }
             .nav-links { display: none; } /* Hide links on mobile for simplicity */
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .partner-card {
+                padding: 20px;
+                min-height: 120px;
+            }
+            /* Reels: 9:16 on mobile, no stretching */
+            .reel-card {
+                min-width: min(260px, 75vw);
+                width: min(260px, 75vw);
+            }
         }
     </style>
 </head>
@@ -544,7 +611,7 @@
             </a>
             <a href="graphic-design.html" class="service-card" data-aos="fade-up" data-aos-delay="400" style="text-decoration: none; color: inherit;">
                 <i class="fas fa-paint-brush service-icon"></i>
-                <h3>Graphic Design</h3>
+                <h3>Graphic Design</h3> <br>
                 <p>Creative poster designs, branding, and visual identity that speaks your brand's language clearly.</p>
             </a>
         </div>
@@ -601,6 +668,24 @@
                     <h4>Event Branding</h4>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="partners" class="partners-section">
+        <h2 class="section-title">Our Partners</h2>
+        <div class="partners-grid">
+            <a href="about-partner1.html" class="partner-card partner-link" data-aos="fade-up" data-aos-delay="100">
+                <img src="Assets/Partners/partner1.png" class="partner-img" alt="Wisemove Consultancy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align:center; color:#999;\'>Partner Logo</div>'">
+            </a>
+            <a href="about-partner2.html" class="partner-card partner-link" data-aos="fade-up" data-aos-delay="200">
+                <img src="Assets/Partners/partner2.png" class="partner-img" alt="Auxxbay" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align:center; color:#999;\'>Partner Logo</div>'">
+            </a>
+            <a href="about-partner3.html" class="partner-card partner-link" data-aos="fade-up" data-aos-delay="300">
+                <img src="Assets/Partners/partner3.png" class="partner-img" alt="AUXXWEB PVT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align:center; color:#999;\'>Partner Logo</div>'">
+            </a>
+            <a href="about-partner4.html" class="partner-card partner-link" data-aos="fade-up" data-aos-delay="400">
+                <img src="Assets/Partners/partner4.png" class="partner-img" alt="Gevora Global" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align:center; color:#999;\'>Partner Logo</div>'">
+            </a>
         </div>
     </section>
 
